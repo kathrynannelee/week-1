@@ -16,6 +16,7 @@
 // Get the input box and the canvas element
 const inputBox = document.getElementById('inputBox');
 const canvas = document.getElementById('myCanvas');
+canvas.color = 'green';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -29,7 +30,7 @@ inputBox.addEventListener('keydown', function (event) {
         const inputBoxRect = inputBox.getBoundingClientRect();
         const x = inputBoxRect.left;
         const y = inputBoxRect.top;
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = 'blue';
         ctx.fillText(inputValue, x, y);
         inputBox.value = '';
     }
