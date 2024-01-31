@@ -1,22 +1,9 @@
-// const inputBox = document.createElement('input');
-// inputBox.type = 'text';
-// inputBox.id = 'inputBox';
-
-
-// const myCanvas = document.createElement('canvas');
-// myCanvas.width = window.innerWidth;
-// myCanvas.height = window.innerHeight;
-
-// const ctx = myCanvas.getContext('2d');
-// ctx.fillStyle = 'black';
-// ctx.fillRect(0, 0, myCanvas.width, myCanvas.height);
-
-// document.body.appendChild(myCanvas);
+//code adapted from Dano "https://github.com/dano1234/SharedMindsS24/tree/master/Week%2001%20%20Vanilla%20Javascript/Distributed%20in%20HTML%20and%20CSS"
 
 // Get the input box and the canvas element
 const inputBox = document.getElementById('inputBox');
 const canvas = document.getElementById('myCanvas');
-canvas.color = 'green';
+canvas.color = 'black';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -26,7 +13,7 @@ inputBox.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         const inputValue = inputBox.value;
         const ctx = canvas.getContext('2d');
-        ctx.font = '30px Georgia';
+        ctx.font = '100px Georgia';
         const inputBoxRect = inputBox.getBoundingClientRect();
         const x = inputBoxRect.left;
         const y = inputBoxRect.top;
