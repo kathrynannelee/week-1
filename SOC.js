@@ -5,6 +5,9 @@ const inputBox = document.getElementById('inputBox');
 const canvas = document.getElementById('myCanvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+alert("Move your cursor to where your thoughts lead you!")
+//canvas.color = 'black';
+//canvas.backgroundColor = 'black';
 
 // Add event listener to the input box
 inputBox.addEventListener('keydown', function (event) {
@@ -13,11 +16,11 @@ inputBox.addEventListener('keydown', function (event) {
         const inputValue = inputBox.value;
         const ctx = canvas.getContext('2d');
         ctx.font = '45px Georgia';
-        ctx.fillStyle = 'blue';
-        ctx.fillText(inputValue, x, y);
         const inputBoxRect = inputBox.getBoundingClientRect();
         const x = inputBoxRect.left;
         const y = inputBoxRect.top;
+        ctx.fillStyle = 'blue';
+        ctx.fillText(inputValue, x, y);
         inputBox.value = '';
     }
 });
