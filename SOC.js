@@ -25,7 +25,7 @@ inputBox.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         const inputValue = inputBox.value;
         const ctx = canvas.getContext('2d');
-        ctx.font = '30px Monospace';
+        ctx.font = '30px Georgia';
         const inputBoxRect = inputBox.getBoundingClientRect();
         const x = inputBoxRect.left;
         const y = inputBoxRect.top;
