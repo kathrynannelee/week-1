@@ -3,7 +3,6 @@
 // Get the input box and the canvas element
 const inputBox = document.getElementById('inputBox');
 const canvas = document.getElementById('myCanvas');
-canvas.color = 'black';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -13,12 +12,12 @@ inputBox.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         const inputValue = inputBox.value;
         const ctx = canvas.getContext('2d');
-        ctx.font = '100px Georgia';
+        ctx.font = '45px Georgia';
+        ctx.fillStyle = 'blue';
+        ctx.fillText(inputValue, x, y);
         const inputBoxRect = inputBox.getBoundingClientRect();
         const x = inputBoxRect.left;
         const y = inputBoxRect.top;
-        ctx.fillStyle = 'blue';
-        ctx.fillText(inputValue, x, y);
         inputBox.value = '';
     }
 });
